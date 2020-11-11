@@ -1,33 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<title>Formulaires</title>
+</head>
+<body>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
-</html>
+    <h1 style="text-align : center;">Saisie d'une fiche "Personne"</h1>
+
+<form style="text-align : center;" method="POST" name="inscription">
+
+    <label style="width:150px;; display: inline-block;" for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" placeholder="votre nom" maxlength="20">
+    <br/>
+
+    <label style="width:150px; display: inline-block;" for="prenom">Prenom</label>
+    <input type="text" id="prenom" name="prenom" placeholder="votre prenom" maxlength=10>
+    <br/>
+    
+    
+    <label style="width:150px; display: inline-block;" for="date">Date de naissance</label>
+    <input type="date" id="date" name="date" placeholder="ex: jj/mm/aaaa"/> 
+    <br/>
+
+    <label style="width:150px; display: inline-block;" for="adresse">Asresse</label>
+    <input type="text" id="adresse" name="adresse" placeholder="adresse"/>
+    <br/>
+    
+    <label style="width:150px; display: inline-block;" for="mail">Mail</label>
+    <input type="email" id="mail" name="mail" placeholder="ex: np@mail.fr">
+      <br/>
+      <br/>
+	
+      <input style="width: 330px; padding : 5px;" type="submit" value="Valider">
+    </form>
+
+<p style="color:red;text-align : center;" id="erreur"></p>
+
+<script>
+    document.forms["inscription"].addEventListener("submit", function(e) {
+ 
+ var erreur;
+
+ var inputs = this;
+
+
+ for (var i = 0; i < inputs.length; i++) {
+     console.log(inputs[i]);
+     if (!inputs[i].value) {
+         erreur = "Veuillez renseigner tous les champs!";
+         break;
+     }
+ }
+
+ if (erreur) {
+     e.preventDefault();
+     document.getElementById("erreur").innerHTML = erreur;
+     return false;
+ } else {
+     alert('Fiche envoyé!');
+ }
+ 
+});
+</script>
+</body>
+</html>​
