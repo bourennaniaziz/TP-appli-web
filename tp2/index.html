@@ -44,8 +44,12 @@
  var erreur;
 
  var inputs = this;
-
-
+	    
+        // Traitement cas par cas (input unique)
+	//if (inputs["nom"].value != "nom") {
+	//	erreur = "Veuillez renseigner votre nom";}...
+ 
+	// Traitement générique
  for (var i = 0; i < inputs.length; i++) {
      console.log(inputs[i]);
      if (!inputs[i].value) {
