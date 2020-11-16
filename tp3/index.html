@@ -6,28 +6,74 @@
         <title>TP3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/form-jquery-validation.js"></script>
     </head>
-    <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+    <body> 
+        <br> 
+        <div class="container">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="Nom">Nom</label>
+                    <input type="text" class="form-control" id="Nom" placeholder="Nom" required=>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <label for="Prenom">Prenom</label>
+                    <input type="text" class="form-control" id="Prenom" placeholder="Prenom" required>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <label for="date">Date de naissance</label>
+                    <input type="date" class="form-control" id="date" placeholder="ex: jj/mm/aaaa" required>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <label for="Adresse">Adresse</label>
+                    <input type="text" class="form-control" id="Adresse" placeholder= "Donnez votre Adresse"required>
+                    <br>
+                </div>
+                <div class="col-md-3">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" id="Email" placeholder="Exemple@gmail.com" required>
+                    <br>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Valider</button>
+                </div>
+              </form>
+        
+        </div>   
+
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adresse sur google Maps</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Paris</p>
+                  <img src="https://www.google.com/search?rlz=1C1DIMC_enFR861FR861&sxsrf=ALeKk039A77O6sAl-6F-aDeP2xaOyN05mg%3A1605555870575&ei=ntayX7DdIoa6aZy2mZAJ&q=paris+75&gs_ssp=eJzj4tDP1TcwLSzJMmD04ihILMosVjA3BQA8qgXA&oq=paris+75&gs_lcp=CgZwc3ktYWIQARgAMgcILhAnEJMCMgIIADICCC4yAgguMgIILjICCC4yAggAMgIILjICCC4yAgguOgcIABCwAxBDOgcIABBHELADOgQIIxAnOgUIABCxAzoKCC4Q6gIQJxCTAjoHCCMQ6gIQJzoHCC4Q6gIQJzoICAAQsQMQgwE6BQguELEDOgcIABCxAxBDOg0IABCxAxCDARAUEIcCOggILhCxAxCDAToECC4QJzoECAAQQzoKCC4QsQMQgwEQQzoECC4QQzoHCCMQsQIQJzoGCAAQFhAeOggIABAWEAoQHlCjEljs8wFg8ZsCaARwAHgBgAHBAYgBxg2SAQQxNC42mAEAoAEBqgEHZ3dzLXdperABCsgBCsABAQ&sclient=psy-ab#" class="maps-img-top" alt="Mon adresse">
+                   <br>
+                  <a href="https://www.google.fr/maps/@48.8066728,2.3067282,14z">google maps</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Sauvegarder</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+                    
+            
+            </div>
+          </div>
+        </div>
+    </div>
+ </body>
+    
 </html>
